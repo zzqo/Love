@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CSS3实现图片全屏背景特效</title>
+    <link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style3.css"/>
+    <script type="text/javascript" src="js/modernizr_custom.js"></script>
+</head>
+<body id="page">
+<audio autoplay="autoplay" loop="loop">
+    <source src="music/music.mp3"/>
+</audio>
+<ul class="cb-slideshow">
+    <li><span>清</span>
+        <div><h3>我喜欢你</h3></div>
+    </li>
+    <li><span>清</span>
+        <div><h3>真的喜欢</h3></div>
+    </li>
+    <li><span>清</span>
+        <div><h3>只恨时间</h3></div>
+    </li>
+    <li><span>清</span>
+        <div><h3>过往匆匆</h3></div>
+    </li>
+    <li><span>清</span>
+        <div><h3>不经意间</h3></div>
+    </li>
+    <li><span>清</span>
+        <div><h3>彼此奔天涯</h3></div>
+    </li>
+</ul>
+<div class="container">
+
+    <header>我就知道你会在
+        <p id="lanrenzhijia1"></p>
+        <script>
+            Date.prototype.Format = function (fmt) { //javascript时间日期函数
+                var o = {
+                    "M+": this.getMonth() + 1, //月份
+                    "d+": this.getDate(), //日
+                    "h+": this.getHours(), //小时
+                    "m+": this.getMinutes(), //分
+                    "s+": this.getSeconds(), //秒
+                    "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+                    "S": this.getMilliseconds() //毫秒
+                };
+                if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+                for (var k in o)
+                    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+                return fmt;
+            };
+            var time1 = new Date().Format("yyyy年MM月dd日");
+            document.getElementById('lanrenzhijia1').innerHTML = time1;  //将时间赋值给t1
+        </script>
+        这天打开这个软件
+        <h1>
+
+            <span>我喜欢你的微笑</span></h1>
+        <h2>喜欢着你的一颦一笑，一次一次的小宇宙爆发</h2><br><br><br><br>
+    </header>
+</div>
+</body>
+</html>
